@@ -1,0 +1,183 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_barcodes_serial_wizard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-22 15:48+0000\n"
+"PO-Revision-Date: 2025-05-22 15:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_barcodes_serial_wizard
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_qr
+msgid "<span> / </span>"
+msgstr ""
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__product_barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot___barcode_scanned
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__barcode_scanned_manual
+msgid "Barcode Scanned"
+msgstr "Código de barras escaneado"
+
+#. module: stock_barcodes_serial_wizard
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_qr
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__create_uid
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__create_date
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__default_move_id
+msgid "Default Move"
+msgstr "Movimiento predeterminado"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__display_name
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__id
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model,name:stock_barcodes_serial_wizard.model_stock_barcode_lot_line
+msgid "LN/SN Product Lines"
+msgstr "Nº Lote/ Nº Serie de Líneas de Producto"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot____last_update
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__write_uid
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__write_date
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__lot_name
+msgid "Lot"
+msgstr "Lote"
+
+#. module: stock_barcodes_serial_wizard
+#: code:addons/stock_barcodes_serial_wizard/models/stock_move.py:0
+#, python-format
+msgid "Lot/Serial Number Details"
+msgstr "Detalles del Lote/Serie"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__move_line_id
+msgid "Move Line"
+msgstr "Apunte"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__picking_id
+msgid "Picking"
+msgstr "Albarán"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__qty_done
+msgid "Qty Done"
+msgstr "Ctd hecha"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__qty_reserved
+msgid "Qty Reserved"
+msgstr "Ctd reservada"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__qty_done
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_qr
+msgid "Quantity Done"
+msgstr "Cantidad hecha"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__qty_reserved
+msgid "Quantity Reserved"
+msgstr "Cantidad reservada"
+
+#. module: stock_barcodes_serial_wizard
+#: code:addons/stock_barcodes_serial_wizard/wizard/stock_barcode_lot.py:0
+#, python-format
+msgid "Serie no encontrada: %s"
+msgstr ""
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot_line__stock_barcode_lot_id
+msgid "Stock Barcode Lot"
+msgstr "Lote de código de barras en existencias"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,field_description:stock_barcodes_serial_wizard.field_stock_barcode_lot__stock_barcode_lot_line_ids
+msgid "Stock Barcode Lot Line"
+msgstr "Línea de lote de código de barras en existencias"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model,name:stock_barcodes_serial_wizard.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de Stock"
+
+#. module: stock_barcodes_serial_wizard
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcodes_serial_wizard.view_barcode_lot_form_qr
+msgid "Validate Lot"
+msgstr "Validar Lote"
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model.fields,help:stock_barcodes_serial_wizard.field_stock_barcode_lot___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr "Valor del último código de barras escaneado."
+
+#. module: stock_barcodes_serial_wizard
+#: model:ir.model,name:stock_barcodes_serial_wizard.model_stock_barcode_lot
+msgid "Wizard to scan SN/LN for specific product"
+msgstr "Asistente para escanear SN/LN de un producto específico"
+
+#. module: stock_barcodes_serial_wizard
+#: code:addons/stock_barcodes_serial_wizard/wizard/stock_barcode_lot.py:0
+#: code:addons/stock_barcodes_serial_wizard/wizard/stock_barcode_lot.py:0
+#, python-format
+msgid "You cannot scan two times the same serial number"
+msgstr "No puede escanear dos veces el mismo número de serie"

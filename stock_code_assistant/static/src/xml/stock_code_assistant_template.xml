@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="stock_code_assistant.LotManagerTemplate">
+        <div id="o_lot_manager">
+            <div id="validated_container" t-if="state.isValidated">
+                <div class="validated-container">
+                    <div class="validated-box">
+                        <div class="validated-content">
+                            <span class="fa fa-check-circle validated-icon" />
+                            <h3 class="validated-title">Picking Already Validated</h3>
+                            <p
+                                class="validated-text"
+                            >This picking has been successfully validated and can no longer be modified from here</p>
+                        </div>
+                        <div class="picking-ref" t-on-click="onPickingRefClick">
+                            <span class="picking-ref-badge">
+                                <t t-out="state.pickingName" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_container" t-if="!state.isValidated">
+                <div class="main-container">
+                    <div class="header mb-3">
+                        <span class="fa fa-cubes title-icon" />
+                        <span class="title-text">Code Assistant</span>
+                    </div>
+                    <div class="controls">
+                        <div class="picking-ref" t-on-click="onPickingRefClick">
+                            <span class="picking-ref-badge">
+                                <t t-out="state.pickingName" />
+                            </span>
+                        </div>
+                        <button
+                            id="o_lot_manager_validate"
+                            t-ref="validateButton"
+                            class="btn btn-primary validate-button"
+                            t-on-click="onValidatePicking"
+                        >
+                            Validate Picking
+                        </button>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-box">
+                            <label for="o_lot_manager_num_packages">Packages: </label>
+                            <input
+                                id="o_lot_manager_num_packages"
+                                type="number"
+                                min="0"
+                                step="1"
+                                class="form-control form-control-sm"
+                                title="Number of Packages"
+                                t-att-value="state.numPackages"
+                                t-on-change="onNumPackagesChange"
+                            />
+                            <label for="o_lot_manager_carrier">Carrier: </label>
+                            <span id="o_lot_manager_carrier" class="carrier">
+                                <t t-out="state.carrier" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <div id="o_lot_manager_message" class="message" />
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs" id="lotManagerTabs" role="tablist">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    id="tab-lotes-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-lotes"
+                                    role="tab"
+                                    aria-controls="tab-lotes"
+                                    aria-selected="true"
+                                    t-on-click="onTabLotesClick"
+                                >Pending</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    id="tab-independientes-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-independientes"
+                                    role="tab"
+                                    aria-controls="tab-independientes"
+                                    aria-selected="false"
+                                    t-on-click="onTabUntrackedClick"
+                                >Done</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="lotManagerTabsContent">
+                            <div
+                                class="tab-pane fade show active"
+                                id="tab-lotes"
+                                role="tabpanel"
+                            >
+                                <div>
+                                    <input
+                                        id="o_lot_manager_barcode"
+                                        t-ref="barcodeInput"
+                                        type="text"
+                                        placeholder="Scan or enter lot/serial"
+                                        autofocus="autofocus"
+                                        class="input-barcode"
+                                        t-on-keydown="onBarcodeScanned"
+                                    />
+                                </div>
+                                <table
+                                    id="o_lot_manager_moves_lotes"
+                                    class="table table-sm tracked-table"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th class="col-product">Product</th>
+                                            <th class="col-barcode">Barcode</th>
+                                            <th
+                                                class="col-demand text-center"
+                                            >Demand</th>
+                                            <th class="col-done text-center">Done</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t
+                                            t-foreach="trackedPendingLines"
+                                            t-as="line"
+                                            t-key="line_index"
+                                        >
+                                            <tr>
+                                                <td><t t-out="line.producto" /></td>
+                                                <td><t t-out="line.lotName" /></td>
+                                                <td class="text-center"><t
+                                                        t-out="line.cantidad"
+                                                    /></td>
+                                                <td class="text-center"><t
+                                                        t-out="line.hecho"
+                                                    /></td>
+                                            </tr>
+                                        </t>
+                                        <t
+                                            t-foreach="untrackedPendingLines"
+                                            t-as="ml"
+                                            t-key="ml.id"
+                                        >
+                                            <tr class="untracked-row">
+                                                <td><t t-out="ml.product_id[1]" /></td>
+                                                <td>-</td>
+                                                <td class="text-center"><t
+                                                        t-out="ml.quantity"
+                                                    /></td>
+                                                <td class="text-center"><t
+                                                        t-out="ml.qty_done || 0"
+                                                    /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div
+                                class="tab-pane fade"
+                                id="tab-independientes"
+                                role="tabpanel"
+                            >
+                                <!-- <div>
+                                    <input
+                                        id="o_lot_manager_barcode_untracked"
+                                        t-ref="barcodeUntrackedInput"
+                                        type="text"
+                                        placeholder="Scan or enter product barcode"
+                                        class="input-barcode"
+                                        t-on-keydown="onBarcodeScannedUntracked"
+                                    />
+                                </div> -->
+                                <table
+                                    id="o_lot_manager_moves_notracking"
+                                    class="table table-sm"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th class="col-product">Product</th>
+                                            <th class="col-barcode">Barcode</th>
+                                            <th
+                                                class="col-demand text-center"
+                                            >Demand</th>
+                                            <th class="col-done text-center">Done</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t
+                                            t-foreach="completedTrackedLines"
+                                            t-as="line"
+                                            t-key="line_index"
+                                        >
+                                            <tr>
+                                                <td><t t-out="line.producto" /></td>
+                                                <td><t t-out="line.lotName" /></td>
+                                                <td class="text-center"><t
+                                                        t-out="line.cantidad"
+                                                    /></td>
+                                                <td class="text-center"><t
+                                                        t-out="line.hecho"
+                                                    /></td>
+                                            </tr>
+                                        </t>
+                                        <t
+                                            t-foreach="completedUntrackedLines"
+                                            t-as="ml"
+                                            t-key="ml.id"
+                                        >
+                                            <tr>
+                                                <td><t t-out="ml.product_id[1]" /></td>
+                                                <td>-</td>
+                                                <td class="text-center"><t
+                                                        t-out="ml.quantity"
+                                                    /></td>
+                                                <td class="text-center"><t
+                                                        t-out="ml.qty_done || 0"
+                                                    /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </t>
+</templates>

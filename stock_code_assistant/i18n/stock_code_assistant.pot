@@ -1,0 +1,433 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_code_assistant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-14 09:29+0000\n"
+"PO-Revision-Date: 2025-10-14 09:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid " (Total: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid " no está disponible en este picking para procesar."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid " ya fue escaneado y procesado completamente."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid ") para el producto: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid ". Contacte al administrador para corregir esta duplicación."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid ". No se puede agregar más."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid ". Verifique el código."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid ". Verifique que el código sea correcto."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "<div>No picking ID found in context or URL.</div>"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Barcode"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Cantidad máxima alcanzada"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Carrier:"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Code Assistant"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Código de barras no encontrado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Código no encontrado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Código registrado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Código ya procesado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Demand"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Done"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "El código "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "El lote "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "El número de serie "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "El producto "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Error de configuración"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Lote registrado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Lote ya procesado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Múltiples productos tienen el mismo código de barras "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "No se encontró ID de picking."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "No se encontró ningún lote/serie con el código: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "No se puede escanear el mismo número de serie dos veces."
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Not specified"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Number of Packages"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Número de serie registrado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Número de serie ya procesado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Número duplicado"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Packages:"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Pending"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Picking Already Validated"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Producto no disponible"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Scan or enter lot/serial"
+msgstr ""
+
+#. module: stock_code_assistant
+#: model:ir.actions.client,name:stock_code_assistant.action_lot_manager
+#: model_terms:ir.ui.view,arch_db:stock_code_assistant.view_picking_form_inherit_lot_manager
+msgid "Stock Code Assistant"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid ""
+"This picking has been successfully validated and can no longer be modified "
+"from here"
+msgstr ""
+
+#. module: stock_code_assistant
+#: model:ir.model,name:stock_code_assistant.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Unidad agregada"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/xml/stock_code_assistant_template.xml:0
+#, python-format
+msgid "Validate Picking"
+msgstr ""
+
+#. module: stock_code_assistant
+#: model:ir.model,name:stock_code_assistant.model_stock_barcode_lot
+msgid "Wizard to scan SN/LN for specific product"
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "Ya se procesó la cantidad máxima para el lote/serie: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "⚠️ No se encontró ningún producto con el código de barras: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "⚠️ No se puede exceder la cantidad máxima ("
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "✓ Código procesado correctamente: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "✓ Lote procesado correctamente: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "✓ Producto serializado procesado correctamente: "
+msgstr ""
+
+#. module: stock_code_assistant
+#. openerp-web
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#: code:addons/stock_code_assistant/static/src/js/stock_code_assistant_view.js:0
+#, python-format
+msgid "✓ Se agregó 1 unidad al producto: "
+msgstr ""

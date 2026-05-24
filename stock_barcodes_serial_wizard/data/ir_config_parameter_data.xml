@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record
+        id="ibd_lot_barcode_refocus_delay_default_parameter"
+        model="ir.config_parameter"
+        forcecreate="1"
+    >
+        <field name="key">stock_barcodes_serial_wizard.ibd_lot_barcode_refocus_delay</field>
+        <field name="value">300</field>
+    </record>
+</odoo>

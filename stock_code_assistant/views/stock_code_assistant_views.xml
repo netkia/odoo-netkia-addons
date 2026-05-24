@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_lot_manager" model="ir.actions.client">
+        <field name="name">Stock Code Assistant</field>
+        <field name="tag">lot_manager</field>
+    </record>
+
+    <record id="view_picking_form_inherit_lot_manager" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.lot.manager</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                    name="open_lot_manager_window"
+                    type="object"
+                    string="Stock Code Assistant"
+                    class="oe_highlight"
+                    invisible="not (picking_type_code == 'outgoing' and state == 'assigned')"
+                    groups="stock.group_stock_user"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

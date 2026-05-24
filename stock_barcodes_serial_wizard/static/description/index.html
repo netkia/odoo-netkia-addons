@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Barcodes Serial Wizard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 5px 5px 5px 0;
+        }
+        .badge-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+        .badge-info {
+            background: #17a2b8;
+            color: white;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .screenshot {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .author {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            color: #666;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Stock Barcodes Serial Wizard</h1>
+        
+        <div class="tech-stack">
+            <span class="badge badge-primary">Odoo 18.0</span>
+            <span class="badge badge-success">Stock Management</span>
+            <span class="badge badge-info">Barcode Scanner</span>
+            <span class="badge badge-primary">Serial Numbers</span>
+            <span class="badge badge-info">Lot Numbers</span>
+        </div>
+
+        <div class="highlight-box">
+            <strong>📦 Gestión avanzada de números de serie y lotes mediante escáner de códigos de barras</strong>
+            <p>Agiliza la captura de números de serie y lotes en recepciones y envíos con un wizard intuitivo que soporta escaneo de códigos de barras y QR.</p>
+        </div>
+
+        <h2>🎯 Características Principales</h2>
+        <ul class="feature-list">
+            <li><strong>Wizard de Escaneo Intuitivo:</strong> Interfaz dedicada para escanear números de serie/lote por producto</li>
+            <li><strong>Modo Barcode y QR:</strong> Dos modos de visualización adaptados a diferentes flujos de trabajo</li>
+            <li><strong>Búsqueda por SN Proveedor:</strong> Localiza automáticamente números de serie usando el código del proveedor</li>
+            <li><strong>Validación en Tiempo Real:</strong> Verifica duplicados y errores durante el escaneo</li>
+            <li><strong>Integración con Stock Moves:</strong> Actualiza automáticamente las líneas de movimiento de inventario</li>
+            <li><strong>Soporte para Productos Serializados:</strong> Manejo específico para productos con tracking serial</li>
+            <li><strong>Configuración Flexible:</strong> Parámetros de sistema para personalizar el comportamiento</li>
+        </ul>
+
+        <h2>🔧 Funcionalidades Técnicas</h2>
+
+        <h3>📋 Modelos</h3>
+        <ul>
+            <li><code>stock_barcode.lot</code> - Wizard principal para gestión de lotes/seriales</li>
+            <li><code>stock_barcode.lot.line</code> - Líneas individuales del wizard</li>
+            <li>Herencia de <code>stock.move</code> para acción de wizard</li>
+        </ul>
+
+        <h3>🎨 Vistas Disponibles</h3>
+        <ul>
+            <li><strong>view_barcode_lot_form_barcode:</strong> Modo escáner estándar para flujos de trabajo tradicionales</li>
+            <li><strong>view_barcode_lot_form_qr:</strong> Modo inline optimizado para códigos QR y escaneo rápido</li>
+        </ul>
+
+        <h3>⚙️ Parámetros de Configuración</h3>
+        <div class="highlight-box">
+            <p>Configurable mediante <code>ir.config_parameter</code> para adaptar el comportamiento a las necesidades del negocio.</p>
+        </div>
+
+        <h2>📊 Casos de Uso</h2>
+        <ul class="feature-list">
+            <li>Recepción de mercancía con números de serie individuales</li>
+            <li>Picking de productos serializados para envíos</li>
+            <li>Trazabilidad completa de lotes en producción</li>
+            <li>Control de inventario con códigos de proveedor</li>
+            <li>Validación de albaranes con escaneo masivo de seriales</li>
+        </ul>
+
+        <h2>🚀 Flujo de Trabajo</h2>
+        <ol>
+            <li>Desde un movimiento de stock (<code>stock.move</code>), abrir el wizard mediante el botón de acción</li>
+            <li>El wizard carga automáticamente las líneas de movimiento candidatas</li>
+            <li>Escanear códigos de barras o QR de los números de serie/lote</li>
+            <li>El sistema valida y busca por número de serie o SN proveedor</li>
+            <li>Las cantidades se actualizan en tiempo real</li>
+            <li>Al confirmar, las líneas de movimiento se actualizan automáticamente</li>
+        </ol>
+
+        <h2>🔗 Dependencias</h2>
+        <ul>
+            <li><code>stock</code> - Gestión de inventario base de Odoo</li>
+            <li><code>barcodes</code> - Framework de escaneo de códigos de barras</li>
+        </ul>
+
+        <h2>💼 Integración con IPTecno Custom</h2>
+        <div class="highlight-box">
+            <p>Este módulo se integra perfectamente con el ecosistema de Stock, especialmente con:</p>
+            <ul>
+                <li><strong>stock_picking_import_serial_number_extend:</strong> Importación masiva desde Excel</li>
+            </ul>
+        </div>
+
+        <h2>📱 Modos de Operación</h2>
+        
+        <h3>Modo Barcode (Diálogo)</h3>
+        <p>Vista en ventana emergente para flujos de trabajo detallados con múltiples seriales.</p>
+        
+        <h3>Modo QR Inline</h3>
+        <p>Vista integrada para escaneo rápido con códigos QR en dispositivos móviles.</p>
+
+        <h2>⚡ Mejoras sobre el Estándar</h2>
+        <ul class="feature-list">
+            <li>Búsqueda inteligente por código de proveedor (sn_proveedor)</li>
+            <li>Dos modos de visualización adaptables</li>
+            <li>Validación mejorada de duplicados</li>
+            <li>Manejo optimizado para productos serializados</li>
+            <li>Integración con campos personalizados IBD Global</li>
+        </ul>
+
+        <div class="author">
+            <h2 style="color: white; border: none; margin-top: 0;">👥 Autores</h2>
+            <p style="margin: 5px 0;"><strong>Tecnativa - David Vidal</strong> (Desarrollo principal)</p>
+            <p style="margin: 5px 0;"><strong>Qubiq - Xavier Piernas</strong> (Funcionalidades base)</p>
+            <p style="margin: 5px 0;"><strong>IBD Global</strong> (Adaptaciones y mejoras custom)</p>
+            <p style="margin: 5px 0;"><strong>Netkia</strong> (Adaptaciones y mejoras)</p>
+
+        </div>
+
+        <div class="footer">
+            <p><strong>Licencia:</strong> OEEL-1 (Odoo Enterprise Edition License)</p>
+            <p><strong>Versión:</strong> 18.0.1.0.0</p>
+            <p><strong>Categoría:</strong> Inventory / Warehouse Management</p>
+            <p style="margin-top: 20px; color: #667eea;">
+                <strong>Parte del ecosistema Doodba</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
