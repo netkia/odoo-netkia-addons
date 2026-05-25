@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="view_employee_forminherit_reparto_nomina" model="ir.ui.view">
+        <field name="name">view.employee.form.inherit.reparto.nomina</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="inside">
+                <group name="payroll_distribution">
+                    <group string="Payroll distribution">
+                        <field name="payroll_code" />
+                        <field name="account_analytic_tag_id" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* reparto_nomina
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-03 08:56+0000\n"
+"PO-Revision-Date: 2020-12-03 08:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:199
+#: model:ir.model.fields,field_description:reparto_nomina.field_hr_employee__account_analytic_tag_id
+#, python-format
+msgid "Account Analytic Tag"
+msgstr "Etiqueta nómina"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_payroll_distribution_process_wiz_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_payroll_distribution_process_wiz_form
+msgid "Check Data"
+msgstr "Comprobar datos"
+
+#. module: reparto_nomina
+#: model:ir.model,name:reparto_nomina.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: reparto_nomina
+#: model:ir.model,name:reparto_nomina.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_res_config_settings__employee_account_analytic_tag_id
+msgid "Employee Account Analytic Tag"
+msgstr "Etiqueta de reparto de nómina"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__file_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__id
+msgid "ID"
+msgstr ""
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_hr_employee__payroll_code
+msgid "Payroll Code"
+msgstr "Código nómina"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_payroll_distribution_process_wiz_form
+msgid "Payroll Distribution"
+msgstr "Reparto de Nómina"
+
+#. module: reparto_nomina
+#: model:ir.actions.act_window,name:reparto_nomina.action_view_payroll_distribution_process_wiz
+#: model:ir.model,name:reparto_nomina.model_payroll_distribution_process_wiz
+#: model:ir.ui.menu,name:reparto_nomina.menu_payroll_distribution_process
+msgid "Payroll Distribution Process"
+msgstr "Proceso de Reparto de Nómina"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/models/hr_employee.py:14
+#, python-format
+msgid "Payroll code already exists!"
+msgstr "¡El código nómina ya existe!"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_employee_forminherit_reparto_nomina
+msgid "Payroll distribution"
+msgstr "Reparto de nómina"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:96
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:170
+#, python-format
+msgid "The analytical accounts of the employees do not coincide with those indicated in the Distribution Label of the payroll"
+msgstr "No coinciden las cuentas analíticas de los empleados con las indicadas en la Etiqueta de reparto de nómina"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:88
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:165
+#, python-format
+msgid "The employee  does not have a payroll tag indicated"
+msgstr "El empleado  no tiene indicada una etiqueta de nómina"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:101
+#, python-format
+msgid "The file is OK"
+msgstr "El fichero es correcto"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:53
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:126
+#, python-format
+msgid "The payroll distribution label is missing in Configuration"
+msgstr "Falta en Configuración la Etiqueta de reparto de nómina"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:85
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:161
+#, python-format
+msgid "There is no employee for code "
+msgstr "No existe empleado para el código"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_payroll_distribution_process_wiz_form
+msgid "Update Process"
+msgstr "Actualizar reparto"
+
+#. module: reparto_nomina
+#: model:ir.model.fields,field_description:reparto_nomina.field_payroll_distribution_process_wiz__upload_file
+msgid "Upload File"
+msgstr "Subir Fichero"
+
+#. module: reparto_nomina
+#: model_terms:ir.ui.view,arch_db:reparto_nomina.view_payroll_distribution_process_wiz_form
+msgid ""
+"Wizard for the execution of a process that reads an Excel file and makes a series of calculations to\n"
+"                        finish updating the percentages of the analytical account of the analytical label of the parameterization"
+msgstr ""
+"Asistente para la ejecución del proceso que lee un fichero excel y crea una serie de cálculos para terminar\n"
+"                        actualizando los porcentajes de las cuentas analíticas de la etiqueta analítica de la parametrización"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:37
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:110
+#, python-format
+msgid "You must upload a file"
+msgstr "Debes subir un fichero"
+
+#. module: reparto_nomina
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:50
+#: code:addons/reparto_nomina/wizard/payroll_distribution_process_wiz.py:123
+#, python-format
+msgid "You must upload a file with correct format"
+msgstr "Debes subir un fichero con el formato correcto"
+
+#. module: reparto_nomina
+#: model:ir.ui.menu,name:reparto_nomina.menu_payroll_distribution
+msgid "menu_payroll_distribution"
+msgstr "Reparto de Nómina"
+
+#. module: reparto_nomina
+#: sql_constraint:hr.employee:0
+msgid "¡El código nómina ya existe!"
+msgstr ""
+

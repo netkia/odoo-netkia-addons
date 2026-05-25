@@ -1,0 +1,18 @@
+<odoo>
+    <record id="account_analytic_tag_form_view" model="ir.ui.view">
+        <field name="model">account.analytic.tag</field>
+        <field name="inherit_id" ref="account_analytic_tag.account_analytic_tag_form_view" />
+        <field name="arch" type="xml">
+            <field name="account_analytic_id" position="attributes">
+                <attribute name="invisible">active_analytic_distribution</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+            <field name="account_analytic_id" position="before">
+                <field name="active_analytic_distribution" widget="boolean_toggle" groups="analytic.group_analytic_accounting" />
+            </field>
+            <field name="account_analytic_id" position="after">
+                <field name="analytic_distribution" widget="analytic_distribution" groups="analytic.group_analytic_accounting" invisible="not active_analytic_distribution" />
+            </field>
+        </field>
+    </record>
+</odoo>

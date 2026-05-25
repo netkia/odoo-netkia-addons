@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils: https://docutils.sourceforge.io/" />
+<title>Account Analytic Tag Distribution</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+Despite the name, some widely supported CSS2 features are used.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: gray; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic, pre.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="account-analytic-tag-distribution">
+<h1 class="title">Account Analytic Tag Distribution</h1>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! This file is generated by oca-gen-addon-readme !!
+!! changes will be overwritten.                   !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! source digest: sha256:b4a66319bd95d3b1fe7a2e75b380c229ead82e18ba4ffcedb74bbade967d5d9d
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/netkia/netkia/tree/16.0/account_analytic_tag_distribution"><img alt="netkia/netkia" src="https://img.shields.io/badge/github-netkia%2Fnetkia-lightgray.png?logo=github" /></a></p>
+<p>Módulo que <strong>añade distribución porcentual a etiquetas analíticas</strong>.</p>
+<p>Permite configurar porcentajes de distribución en etiquetas analíticas para repartir automáticamente importes entre múltiples cuentas analíticas.</p>
+<p><strong>Funcionalidad principal:</strong></p>
+<ul class="simple">
+<li>Campo <strong>“Distribución Analítica”</strong> en etiquetas analíticas</li>
+<li><strong>Configuración de porcentajes</strong> por cuenta analítica</li>
+<li><strong>Reparto automático</strong> de importes según porcentajes</li>
+<li>Validación de que <strong>suma = 100%</strong></li>
+</ul>
+<p><strong>Modelos extendidos:</strong></p>
+<dl class="docutils">
+<dt><tt class="docutils literal">account.analytic.tag</tt>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal">distribution</tt> (Boolean) - Indica si etiqueta tiene distribución</li>
+<li><tt class="docutils literal">analytic_distribution</tt> (JSON) - Diccionario de cuentas y porcentajes</li>
+<li>Método de validación de suma 100%</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Flujo de trabajo:</strong></p>
+<ol class="arabic">
+<li><p class="first"><strong>Configurar etiqueta con distribución:</strong></p>
+<ul>
+<li><p class="first">Crear etiqueta “DIST-OFICINAS”</p>
+</li>
+<li><p class="first">Marcar “Distribución Analítica”: ✅</p>
+</li>
+<li><p class="first">Configurar porcentajes:</p>
+<pre class="literal-block">
+OFICINA-MADRID: 50%
+OFICINA-BARCELONA: 30%
+OFICINA-VALENCIA: 20%
+</pre>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Aplicar en documento:</strong></p>
+<ul class="simple">
+<li>Factura de alquiler: 6.000€</li>
+<li>Seleccionar etiqueta: “DIST-OFICINAS”</li>
+</ul>
+</li>
+<li><p class="first"><strong>Sistema automáticamente:</strong></p>
+<ul>
+<li><p class="first">Crea 3 apuntes analíticos:</p>
+<pre class="literal-block">
+OFICINA-MADRID: 3.000€ (50%)
+OFICINA-BARCELONA: 1.800€ (30%)
+OFICINA-VALENCIA: 1.200€ (20%)
+</pre>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Ventajas:</strong></p>
+<ul class="simple">
+<li>✅ Distribución automática sin cálculo manual</li>
+<li>✅ Plantillas reutilizables de distribución</li>
+<li>✅ Consistencia en reparto mensual</li>
+<li>✅ Ahorro de tiempo significativo</li>
+<li>✅ Sin errores de cálculo</li>
+</ul>
+<p><strong>Casos de uso:</strong></p>
+<ul class="simple">
+<li><strong>Gastos compartidos:</strong> Alquiler, electricidad, servicios comunes</li>
+<li><strong>Costes indirectos:</strong> Distribución por oficinas/departamentos</li>
+<li><strong>Multi-proyecto:</strong> Empleado trabaja en varios proyectos</li>
+<li><strong>Multi-departamento:</strong> Recurso compartido entre áreas</li>
+</ul>
+<p><strong>Ejemplo práctico:</strong></p>
+<p>Factura electricidad 2.000€:</p>
+<pre class="literal-block">
+Etiqueta: DIST-CONSUMO-ENERGIA
+Distribución:
+- Producción: 60% → 1.200€
+- Oficinas: 25% → 500€
+- Almacén: 15% → 300€
+</pre>
+<p><strong>Ventaja sobre cuenta analítica simple:</strong></p>
+<ul class="simple">
+<li>Cuenta analítica simple: Todo el importe a UNA cuenta</li>
+<li>Etiqueta con distribución: Reparto automático entre VARIAS cuentas</li>
+</ul>
+<p><strong>Integración:</strong></p>
+<ul class="simple">
+<li>Extiende <tt class="docutils literal">account_analytic_tag</tt> (OCA/Odoo estándar)</li>
+<li>Compatible con todos los módulos que usan etiquetas</li>
+<li>Base para módulos avanzados de distribución</li>
+</ul>
+<p><strong>Origen:</strong></p>
+<ul class="simple">
+<li>Autor original: Tecnativa - Víctor Martínez</li>
+<li>Mantenedor: victoralmau</li>
+<li>Adaptado por: Netkia</li>
+</ul>
+<p><strong>Table of contents</strong></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuration" id="toc-entry-1">Configuration</a></li>
+<li><a class="reference internal" href="#instalacion" id="toc-entry-2">Instalación</a></li>
+<li><a class="reference internal" href="#parametro-del-sistema" id="toc-entry-3">Parámetro del sistema</a></li>
+<li><a class="reference internal" href="#crear-etiqueta-con-distribucion" id="toc-entry-4">Crear etiqueta con distribución</a></li>
+<li><a class="reference internal" href="#verificacion-post-instalacion" id="toc-entry-5">Verificación post-instalación</a></li>
+<li><a class="reference internal" href="#plantillas-de-distribucion-comunes" id="toc-entry-6">Plantillas de distribución comunes</a></li>
+<li><a class="reference internal" href="#modificar-distribucion-existente" id="toc-entry-7">Modificar distribución existente</a></li>
+<li><a class="reference internal" href="#desactivar-distribucion" id="toc-entry-8">Desactivar distribución</a></li>
+<li><a class="reference internal" href="#usage" id="toc-entry-9">Usage</a></li>
+<li><a class="reference internal" href="#caso-1-distribucion-de-alquiler-mensual" id="toc-entry-10">Caso 1: Distribución de alquiler mensual</a></li>
+<li><a class="reference internal" href="#caso-2-empleado-multi-proyecto" id="toc-entry-11">Caso 2: Empleado multi-proyecto</a></li>
+<li><a class="reference internal" href="#caso-3-servicios-comunes-por-departamento" id="toc-entry-12">Caso 3: Servicios comunes por departamento</a></li>
+<li><a class="reference internal" href="#caso-4-proyecto-con-subcontratacion" id="toc-entry-13">Caso 4: Proyecto con subcontratación</a></li>
+<li><a class="reference internal" href="#caso-5-cambio-mensual-de-distribucion" id="toc-entry-14">Caso 5: Cambio mensual de distribución</a></li>
+<li><a class="reference internal" href="#caso-6-distribucion-compleja-multi-nivel" id="toc-entry-15">Caso 6: Distribución compleja multi-nivel</a></li>
+<li><a class="reference internal" href="#caso-7-comparativa-presupuesto-vs-real" id="toc-entry-16">Caso 7: Comparativa presupuesto vs. real</a></li>
+<li><a class="reference internal" href="#caso-8-validacion-de-suma-incorrecta" id="toc-entry-17">Caso 8: Validación de suma incorrecta</a></li>
+<li><a class="reference internal" href="#caso-9-reporte-de-distribuciones-activas" id="toc-entry-18">Caso 9: Reporte de distribuciones activas</a></li>
+<li><a class="reference internal" href="#caso-10-facturacion-interna-con-distribucion" id="toc-entry-19">Caso 10: Facturación interna con distribución</a></li>
+<li><a class="reference internal" href="#caso-11-distribucion-por-actividad-real" id="toc-entry-20">Caso 11: Distribución por actividad real</a></li>
+<li><a class="reference internal" href="#known-issues-roadmap" id="toc-entry-21">Known issues / Roadmap</a></li>
+<li><a class="reference internal" href="#mejoras-planificadas-v18-0-2-0-0" id="toc-entry-22">Mejoras planificadas v18.0.2.0.0</a></li>
+<li><a class="reference internal" href="#limitaciones-actuales" id="toc-entry-23">Limitaciones actuales</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-24">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-25">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-26">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-27">Contributors</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-28">Maintainers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h1><a class="toc-backref" href="#toc-entry-1">Configuration</a></h1>
+</div>
+<div class="section" id="instalacion">
+<h1><a class="toc-backref" href="#toc-entry-2">Instalación</a></h1>
+<ol class="arabic simple">
+<li>Instalar módulo <strong>account_analytic_tag_distribution</strong></li>
+<li><strong>Dependencias automáticas:</strong><ul>
+<li><tt class="docutils literal">account_analytic_tag</tt> - Sistema de etiquetas analíticas</li>
+<li><tt class="docutils literal">feature_toggle</tt> - Sistema de control de funcionalidades</li>
+</ul>
+</li>
+<li>Actualizar lista de aplicaciones</li>
+</ol>
+</div>
+<div class="section" id="parametro-del-sistema">
+<h1><a class="toc-backref" href="#toc-entry-3">Parámetro del sistema</a></h1>
+<p>Este módulo utiliza un parámetro del sistema para controlar su funcionalidad:</p>
+<p><strong>Parámetro:</strong> <tt class="docutils literal">analytic.tag_distribution</tt></p>
+<ul class="simple">
+<li><strong>Valor:</strong> <tt class="docutils literal">1</tt> (activado) o <tt class="docutils literal">0</tt> (desactivado)</li>
+<li><strong>Ubicación:</strong> Ajustes → Técnico → Parámetros del Sistema</li>
+<li><strong>Efecto:</strong>
+- <tt class="docutils literal">1</tt>: Las etiquetas analíticas pueden tener distribución analítica y controlar apuntes analíticos
+- <tt class="docutils literal">0</tt>: Comportamiento estándar de Odoo (etiquetas sin distribución)</li>
+</ul>
+<p><strong>Activar la funcionalidad:</strong></p>
+<ol class="arabic simple">
+<li>Ir a <strong>Ajustes → Técnico → Parámetros del Sistema</strong></li>
+<li>Crear/editar parámetro <tt class="docutils literal">analytic.tag_distribution</tt></li>
+<li>Establecer valor a <tt class="docutils literal">1</tt></li>
+<li>Refrescar el navegador si es necesario</li>
+<li>El campo “Distribución Analítica” aparecerá en las etiquetas analíticas</li>
+</ol>
+</div>
+<div class="section" id="crear-etiqueta-con-distribucion">
+<h1><a class="toc-backref" href="#toc-entry-4">Crear etiqueta con distribución</a></h1>
+<p><strong>Paso 1: Crear etiqueta analítica</strong></p>
+<ol class="arabic">
+<li><p class="first">Ir a <strong>Contabilidad → Configuración → Analítica → Etiquetas Analíticas</strong></p>
+</li>
+<li><p class="first">Crear nueva etiqueta:</p>
+<pre class="literal-block">
+Nombre: DIST-OFICINAS
+Color: Azul
+</pre>
+</li>
+<li><p class="first">Marcar checkbox <strong>“Distribución Analítica”</strong>: ✅</p>
+</li>
+</ol>
+<p><strong>Paso 2: Configurar distribución</strong></p>
+<ol class="arabic">
+<li><p class="first">Campo <strong>“Distribución Analítica”</strong> aparece</p>
+</li>
+<li><p class="first">Añadir cuentas y porcentajes:</p>
+<pre class="literal-block">
+OFICINA-MADRID: 50%
+OFICINA-BARCELONA: 30%
+OFICINA-VALENCIA: 20%
+</pre>
+</li>
+<li><p class="first"><strong>Sistema valida automáticamente:</strong></p>
+<ul class="simple">
+<li>Suma debe ser 100%</li>
+<li>Si suma ≠ 100% → Error al guardar</li>
+</ul>
+</li>
+<li><p class="first">Guardar</p>
+</li>
+</ol>
+</div>
+<div class="section" id="verificacion-post-instalacion">
+<h1><a class="toc-backref" href="#toc-entry-5">Verificación post-instalación</a></h1>
+<p><strong>Test 1: Crear etiqueta con distribución</strong></p>
+<ol class="arabic">
+<li><p class="first">Crear etiqueta “TEST-DIST”</p>
+</li>
+<li><p class="first">Marcar “Distribución Analítica”</p>
+</li>
+<li><p class="first">Configurar:</p>
+<pre class="literal-block">
+CUENTA-A: 60%
+CUENTA-B: 40%
+</pre>
+</li>
+<li><p class="first">Guardar</p>
+</li>
+<li><p class="first">✅ Debe guardarse correctamente (suma = 100%)</p>
+</li>
+</ol>
+<p><strong>Test 2: Validación de suma</strong></p>
+<ol class="arabic">
+<li><p class="first">Crear etiqueta “TEST-ERROR”</p>
+</li>
+<li><p class="first">Marcar “Distribución Analítica”</p>
+</li>
+<li><p class="first">Configurar:</p>
+<pre class="literal-block">
+CUENTA-A: 60%
+CUENTA-B: 30%
+</pre>
+</li>
+<li><p class="first">Intentar guardar</p>
+</li>
+<li><p class="first">❌ Error: “La distribución debe sumar 100%. Suma actual: 90%”</p>
+</li>
+</ol>
+<p><strong>Test 3: Aplicar en factura</strong></p>
+<ol class="arabic">
+<li><p class="first">Crear factura proveedor</p>
+</li>
+<li><p class="first">Línea:</p>
+<pre class="literal-block">
+Cuenta: 621000 - Alquileres
+Importe: 1.000€
+Etiqueta Analítica: TEST-DIST
+</pre>
+</li>
+<li><p class="first">Validar factura</p>
+</li>
+<li><p class="first"><strong>Verificar apuntes analíticos:</strong></p>
+<ul class="simple">
+<li>Contabilidad → Analítica → Apuntes</li>
+<li>Buscar factura</li>
+<li>✅ Deben existir 2 apuntes:
+- CUENTA-A: 600€ (60%)
+- CUENTA-B: 400€ (40%)</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="plantillas-de-distribucion-comunes">
+<h1><a class="toc-backref" href="#toc-entry-6">Plantillas de distribución comunes</a></h1>
+<p><strong>Ejemplo 1: Distribución por oficinas</strong></p>
+<pre class="literal-block">
+Nombre: DIST-ALQUILER-OFICINAS
+
+OFICINA-MADRID: 45%
+OFICINA-BARCELONA: 35%
+OFICINA-VALENCIA: 20%
+</pre>
+<p><strong>Ejemplo 2: Distribución por departamentos</strong></p>
+<pre class="literal-block">
+Nombre: DIST-SERVICIOS-COMUNES
+
+DPTO-VENTAS: 30%
+DPTO-PRODUCCION: 40%
+DPTO-ADMINISTRACION: 20%
+DPTO-IT: 10%
+</pre>
+<p><strong>Ejemplo 3: Distribución por proyectos</strong></p>
+<pre class="literal-block">
+Nombre: DIST-EMPLEADO-MARIA
+
+PROYECTO-A: 60%
+PROYECTO-B: 30%
+PROYECTO-C: 10%
+</pre>
+<p><strong>Ejemplo 4: Distribución temporal</strong></p>
+<pre class="literal-block">
+Nombre: DIST-Q1-2025
+
+ENERO: 35%
+FEBRERO: 33%
+MARZO: 32%
+</pre>
+</div>
+<div class="section" id="modificar-distribucion-existente">
+<h1><a class="toc-backref" href="#toc-entry-7">Modificar distribución existente</a></h1>
+<p><strong>Cambiar porcentajes:</strong></p>
+<ol class="arabic">
+<li><p class="first">Abrir etiqueta con distribución</p>
+</li>
+<li><p class="first">Modificar porcentajes:</p>
+<pre class="literal-block">
+Antes:
+- MADRID: 50%
+- BARCELONA: 30%
+- VALENCIA: 20%
+
+Ahora:
+- MADRID: 40%
+- BARCELONA: 40%
+- VALENCIA: 20%
+</pre>
+</li>
+<li><p class="first">Validar suma = 100%</p>
+</li>
+<li><p class="first">Guardar</p>
+</li>
+</ol>
+<p><strong>Añadir nueva cuenta:</strong></p>
+<ol class="arabic">
+<li><p class="first">Añadir línea:</p>
+<pre class="literal-block">
+OFICINA-SEVILLA: 10%
+</pre>
+</li>
+<li><p class="first">Ajustar otras para que sumen 100%:</p>
+<pre class="literal-block">
+MADRID: 35%
+BARCELONA: 30%
+VALENCIA: 15%
+SEVILLA: 10%
+(Debe sumar 90% todavía... error!)
+</pre>
+</li>
+<li><p class="first">Corregir:</p>
+<pre class="literal-block">
+MADRID: 35%
+BARCELONA: 30%
+VALENCIA: 20%
+SEVILLA: 15%
+= 100% ✅
+</pre>
+</li>
+</ol>
+</div>
+<div class="section" id="desactivar-distribucion">
+<h1><a class="toc-backref" href="#toc-entry-8">Desactivar distribución</a></h1>
+<p><strong>Para convertir etiqueta normal en distribución:</strong></p>
+<ol class="arabic simple">
+<li>Marcar “Distribución Analítica”: ✅</li>
+<li>Configurar porcentajes</li>
+</ol>
+<p><strong>Para convertir distribución en etiqueta normal:</strong></p>
+<ol class="arabic simple">
+<li>Desmarcar “Distribución Analítica”: ❌</li>
+<li>Campo de distribución desaparece</li>
+<li>Guardar</li>
+</ol>
+<p><strong>Comportamiento anterior se mantiene</strong> en apuntes ya creados.</p>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#toc-entry-9">Usage</a></h1>
+</div>
+<div class="section" id="caso-1-distribucion-de-alquiler-mensual">
+<h1><a class="toc-backref" href="#toc-entry-10">Caso 1: Distribución de alquiler mensual</a></h1>
+<p><strong>Escenario:</strong> Oficina compartida, reparto proporcional del alquiler.</p>
+<p><strong>Configuración:</strong></p>
+<p>Etiqueta: DIST-ALQUILER:</p>
+<pre class="literal-block">
+OFICINA-MADRID: 50% (500m²)
+OFICINA-BARCELONA: 30% (300m²)
+OFICINA-VALENCIA: 20% (200m²)
+</pre>
+<p><strong>Factura mensual:</strong></p>
+<pre class="code text literal-block">
+Proveedor: Inmobiliaria XYZ
+Concepto: Alquiler Octubre 2025
+Importe: 10.000€
+Etiqueta: DIST-ALQUILER
+</pre>
+<p><strong>Sistema automáticamente:</strong></p>
+<pre class="code text literal-block">
+Apunte 1: OFICINA-MADRID → 5.000€ (50%)
+Apunte 2: OFICINA-BARCELONA → 3.000€ (30%)
+Apunte 3: OFICINA-VALENCIA → 2.000€ (20%)
+</pre>
+<p><strong>Informes por oficina:</strong></p>
+<ul class="simple">
+<li>Madrid: Coste alquiler 5.000€</li>
+<li>Barcelona: Coste alquiler 3.000€</li>
+<li>Valencia: Coste alquiler 2.000€</li>
+</ul>
+<p><strong>Mensual y automático</strong> → Sin cálculo manual cada mes.</p>
+</div>
+<div class="section" id="caso-2-empleado-multi-proyecto">
+<h1><a class="toc-backref" href="#toc-entry-11">Caso 2: Empleado multi-proyecto</a></h1>
+<p><strong>Escenario:</strong> Empleado trabaja en varios proyectos simultáneamente.</p>
+<p><strong>Configuración:</strong></p>
+<p>Etiqueta: DIST-MARIA-LOPEZ:</p>
+<pre class="literal-block">
+PROYECTO-A: 60%
+PROYECTO-B: 30%
+PROYECTO-C: 10%
+</pre>
+<p><strong>Nómina mensual:</strong></p>
+<pre class="code text literal-block">
+Empleado: María López
+Salario bruto: 3.500€
+Seguridad Social: 1.050€
+Total coste: 4.550€
+
+Etiqueta: DIST-MARIA-LOPEZ
+</pre>
+<p><strong>Distribución automática:</strong></p>
+<pre class="code text literal-block">
+PROYECTO-A: 2.730€ (60%)
+PROYECTO-B: 1.365€ (30%)
+PROYECTO-C: 455€ (10%)
+</pre>
+<p><strong>Análisis de rentabilidad:</strong></p>
+<ul class="simple">
+<li>Proyecto A conoce coste real de María: 2.730€/mes</li>
+<li>Proyecto B conoce coste real de María: 1.365€/mes</li>
+<li>Proyecto C conoce coste real de María: 455€/mes</li>
+</ul>
+</div>
+<div class="section" id="caso-3-servicios-comunes-por-departamento">
+<h1><a class="toc-backref" href="#toc-entry-12">Caso 3: Servicios comunes por departamento</a></h1>
+<p><strong>Escenario:</strong> Electricidad compartida entre departamentos.</p>
+<p><strong>Configuración:</strong></p>
+<p>Etiqueta: DIST-ELECTRICIDAD:</p>
+<pre class="literal-block">
+DPTO-PRODUCCION: 60% (mayor consumo)
+DPTO-OFICINAS: 25%
+DPTO-ALMACEN: 15%
+</pre>
+<p><strong>Factura eléctrica:</strong></p>
+<pre class="code text literal-block">
+Compañía: Iberdrola
+Período: Octubre 2025
+Importe: 8.500€
+Etiqueta: DIST-ELECTRICIDAD
+</pre>
+<p><strong>Reparto:</strong></p>
+<pre class="code text literal-block">
+Producción: 5.100€ (60%)
+Oficinas: 2.125€ (25%)
+Almacén: 1.275€ (15%)
+</pre>
+<p><strong>Dashboard departamental:</strong></p>
+<ul class="simple">
+<li>Producción ve su coste real de electricidad</li>
+<li>Comparativa mensual por departamento</li>
+<li>Base para facturación interna</li>
+</ul>
+</div>
+<div class="section" id="caso-4-proyecto-con-subcontratacion">
+<h1><a class="toc-backref" href="#toc-entry-13">Caso 4: Proyecto con subcontratación</a></h1>
+<p><strong>Escenario:</strong> Proyecto principal con sub-proyectos.</p>
+<p><strong>Configuración:</strong></p>
+<p>Etiqueta: DIST-PROYECTO-PRINCIPAL:</p>
+<pre class="literal-block">
+SUB-PROYECTO-1: 40%
+SUB-PROYECTO-2: 35%
+SUB-PROYECTO-3: 25%
+</pre>
+<p><strong>Factura de coordinación:</strong></p>
+<pre class="code text literal-block">
+Concepto: Gestión proyecto principal
+Importe: 5.000€
+Etiqueta: DIST-PROYECTO-PRINCIPAL
+</pre>
+<p><strong>Reparto a sub-proyectos:</strong></p>
+<pre class="code text literal-block">
+SUB-PROYECTO-1: 2.000€ (40%)
+SUB-PROYECTO-2: 1.750€ (35%)
+SUB-PROYECTO-3: 1.250€ (25%)
+</pre>
+<p><strong>Ventaja:</strong> Costes comunes distribuidos proporcionalmente.</p>
+</div>
+<div class="section" id="caso-5-cambio-mensual-de-distribucion">
+<h1><a class="toc-backref" href="#toc-entry-14">Caso 5: Cambio mensual de distribución</a></h1>
+<p><strong>Escenario:</strong> Distribución varía según actividad mensual.</p>
+<p><strong>Septiembre 2025:</strong></p>
+<p>Etiqueta: DIST-SOPORTE-IT:</p>
+<pre class="literal-block">
+OFICINA-A: 70% (proyecto grande)
+OFICINA-B: 30%
+</pre>
+<p><strong>Octubre 2025 (proyecto finalizado):</strong></p>
+<p>Actualizar distribución:</p>
+<pre class="literal-block">
+OFICINA-A: 40%
+OFICINA-B: 60% (nuevo proyecto)
+</pre>
+<p><strong>Aplicación:</strong></p>
+<ul class="simple">
+<li>Facturas septiembre: Distribución 70/30</li>
+<li>Facturas octubre: Distribución 40/60</li>
+</ul>
+<p><strong>Flexibilidad:</strong> Ajustar distribución según necesidad mensual.</p>
+</div>
+<div class="section" id="caso-6-distribucion-compleja-multi-nivel">
+<h1><a class="toc-backref" href="#toc-entry-15">Caso 6: Distribución compleja multi-nivel</a></h1>
+<p><strong>Escenario:</strong> Coste se distribuye a regiones, y luego a oficinas.</p>
+<p><strong>Nivel 1 - Etiqueta: DIST-REGION-SUR</strong></p>
+<pre class="literal-block">
+REGION-VALENCIA: 60%
+REGION-MURCIA: 40%
+</pre>
+<p><strong>Nivel 2 - Etiqueta: DIST-OFICINAS-VALENCIA</strong></p>
+<pre class="literal-block">
+OFICINA-VALENCIA-CENTRO: 70%
+OFICINA-VALENCIA-SUR: 30%
+</pre>
+<p><strong>Aplicación manual:</strong></p>
+<ol class="arabic">
+<li><p class="first">Factura: 10.000€</p>
+</li>
+<li><p class="first">Primera distribución (DIST-REGION-SUR):</p>
+<pre class="literal-block">
+VALENCIA: 6.000€
+MURCIA: 4.000€
+</pre>
+</li>
+<li><p class="first">Crear asiento manual para VALENCIA</p>
+</li>
+<li><p class="first">Segunda distribución (DIST-OFICINAS-VALENCIA):</p>
+<pre class="literal-block">
+VALENCIA-CENTRO: 4.200€ (70% de 6.000€)
+VALENCIA-SUR: 1.800€ (30% de 6.000€)
+</pre>
+</li>
+</ol>
+<p><strong>Nota:</strong> Distribución anidada requiere pasos manuales.</p>
+</div>
+<div class="section" id="caso-7-comparativa-presupuesto-vs-real">
+<h1><a class="toc-backref" href="#toc-entry-16">Caso 7: Comparativa presupuesto vs. real</a></h1>
+<p><strong>Escenario:</strong> Presupuesto distribuido, comparar con real.</p>
+<p><strong>Presupuesto anual alquiler:</strong> 120.000€</p>
+<p>Distribución presupuestada:</p>
+<pre class="literal-block">
+MADRID: 60.000€ (50%)
+BARCELONA: 36.000€ (30%)
+VALENCIA: 24.000€ (20%)
+</pre>
+<p><strong>Real ejecutado (usando DIST-ALQUILER):</strong></p>
+<p>Acumulado 10 meses:</p>
+<pre class="literal-block">
+MADRID: 52.000€ (52%)
+BARCELONA: 28.000€ (28%)
+VALENCIA: 20.000€ (20%)
+</pre>
+<p><strong>Análisis:</strong></p>
+<ul class="simple">
+<li>Madrid: +3,3% sobre presupuesto</li>
+<li>Barcelona: -6,7% bajo presupuesto</li>
+<li>Valencia: En presupuesto</li>
+</ul>
+<p><strong>Ajuste:</strong> Renegociar distribución para Q4.</p>
+</div>
+<div class="section" id="caso-8-validacion-de-suma-incorrecta">
+<h1><a class="toc-backref" href="#toc-entry-17">Caso 8: Validación de suma incorrecta</a></h1>
+<p><strong>Escenario:</strong> Error al configurar distribución.</p>
+<p><strong>Intento de configuración:</strong></p>
+<p>Etiqueta: DIST-ERROR:</p>
+<pre class="literal-block">
+CUENTA-A: 50%
+CUENTA-B: 30%
+CUENTA-C: 15%
+</pre>
+<p><strong>Al guardar:</strong></p>
+<p>❌ <strong>Error de Validación:</strong></p>
+<pre class="code text literal-block">
+La distribución debe sumar 100%.
+Suma actual: 95%
+
+Por favor, revise los porcentajes.
+</pre>
+<p><strong>Corrección:</strong></p>
+<pre class="literal-block">
+CUENTA-A: 50%
+CUENTA-B: 30%
+CUENTA-C: 20%
+Total: 100% ✅
+</pre>
+<p><strong>Validación automática</strong> previene errores.</p>
+</div>
+<div class="section" id="caso-9-reporte-de-distribuciones-activas">
+<h1><a class="toc-backref" href="#toc-entry-18">Caso 9: Reporte de distribuciones activas</a></h1>
+<p><strong>Consultar todas las distribuciones configuradas:</strong></p>
+<ol class="arabic">
+<li><p class="first">Ir a <strong>Etiquetas Analíticas</strong></p>
+</li>
+<li><p class="first">Filtrar:</p>
+<pre class="literal-block">
+Distribución Analítica: Sí
+</pre>
+</li>
+<li><p class="first"><strong>Resultado:</strong></p>
+</li>
+</ol>
+<pre class="code text literal-block">
+Etiquetas con distribución:
+
+DIST-ALQUILER (3 cuentas)
+DIST-ELECTRICIDAD (3 cuentas)
+DIST-MARIA-LOPEZ (3 cuentas)
+DIST-SOPORTE-IT (2 cuentas)
+DIST-PROYECTO-A (4 cuentas)
+</pre>
+<p><strong>Revisar periódicamente:</strong></p>
+<ul class="simple">
+<li>Actualizar porcentajes si necesario</li>
+<li>Eliminar distribuciones obsoletas</li>
+<li>Crear nuevas según necesidad</li>
+</ul>
+</div>
+<div class="section" id="caso-10-facturacion-interna-con-distribucion">
+<h1><a class="toc-backref" href="#toc-entry-19">Caso 10: Facturación interna con distribución</a></h1>
+<p><strong>Escenario:</strong> Facturación interna entre departamentos.</p>
+<p><strong>Configuración:</strong></p>
+<p>Departamento IT factura servicios internos:</p>
+<pre class="literal-block">
+Etiqueta: DIST-SERVICIOS-IT
+
+DPTO-VENTAS: 40%
+DPTO-PRODUCCION: 35%
+DPTO-ADMINISTRACION: 25%
+</pre>
+<p><strong>Factura interna mensual:</strong></p>
+<pre class="code text literal-block">
+Concepto: Servicios IT Octubre
+Importe: 5.000€
+Etiqueta: DIST-SERVICIOS-IT
+</pre>
+<p><strong>Cada departamento ve su coste:</strong></p>
+<pre class="code text literal-block">
+Ventas: 2.000€ (40%)
+Producción: 1.750€ (35%)
+Administración: 1.250€ (25%)
+</pre>
+<p><strong>Ventaja:</strong> Transparencia en costes de servicios compartidos.</p>
+</div>
+<div class="section" id="caso-11-distribucion-por-actividad-real">
+<h1><a class="toc-backref" href="#toc-entry-20">Caso 11: Distribución por actividad real</a></h1>
+<p><strong>Escenario:</strong> Ajustar distribución según uso real.</p>
+<p><strong>Análisis de consumo eléctrico real (medidores):</strong></p>
+<pre class="code text literal-block">
+Producción: 6.200 kWh (63%)
+Oficinas: 2.400 kWh (24%)
+Almacén: 1.300 kWh (13%)
+Total: 9.900 kWh
+</pre>
+<p><strong>Actualizar etiqueta DIST-ELECTRICIDAD:</strong></p>
+<p>Antes (estimado):</p>
+<pre class="literal-block">
+Producción: 60%
+Oficinas: 25%
+Almacén: 15%
+</pre>
+<p>Ahora (real):</p>
+<pre class="literal-block">
+Producción: 63%
+Oficinas: 24%
+Almacén: 13%
+</pre>
+<p><strong>Resultado:</strong> Distribución ajustada a consumo real medido.</p>
+</div>
+<div class="section" id="known-issues-roadmap">
+<h1><a class="toc-backref" href="#toc-entry-21">Known issues / Roadmap</a></h1>
+</div>
+<div class="section" id="mejoras-planificadas-v18-0-2-0-0">
+<h1><a class="toc-backref" href="#toc-entry-22">Mejoras planificadas v18.0.2.0.0</a></h1>
+<ul class="simple">
+<li><strong>Distribución dinámica:</strong><ul>
+<li>Actualización automática de porcentajes según uso real</li>
+<li>Integración con medidores (electricidad, m², horas)</li>
+<li>Recálculo mensual automático</li>
+<li>Histórico de evolución de porcentajes</li>
+</ul>
+</li>
+<li><strong>Validaciones avanzadas:</strong><ul>
+<li>Warning si porcentaje cambia &gt;20% respecto anterior</li>
+<li>Bloqueo de distribuciones con cuenta inactiva</li>
+<li>Validación cruzada con presupuestos</li>
+<li>Aprobación workflow para cambios significativos</li>
+</ul>
+</li>
+<li><strong>Plantillas y copias:</strong><ul>
+<li>Biblioteca de plantillas predefinidas</li>
+<li>Copiar distribución de otra etiqueta</li>
+<li>Aplicar plantilla a múltiples etiquetas</li>
+<li>Importar/exportar distribuciones</li>
+</ul>
+</li>
+<li><strong>Distribución anidada:</strong><ul>
+<li>Múltiples niveles de distribución automáticos</li>
+<li>Cascada de distribuciones</li>
+<li>Ejemplo: Región → Ciudad → Oficina</li>
+<li>Sin necesidad de pasos manuales</li>
+</ul>
+</li>
+<li><strong>Dashboard de análisis:</strong><ul>
+<li>Vista de todas las distribuciones activas</li>
+<li>Gráfico de evolución de porcentajes</li>
+<li>Comparativa presupuesto vs. real por etiqueta</li>
+<li>Alertas de desviaciones</li>
+</ul>
+</li>
+<li><strong>Automatización temporal:</strong><ul>
+<li>Cambio programado de distribución</li>
+<li>Distribuciones por temporada</li>
+<li>Calendario de cambios</li>
+<li>Notificaciones de cambios próximos</li>
+</ul>
+</li>
+<li><strong>Integración con reportes:</strong><ul>
+<li>Informe de costes distribuidos</li>
+<li>Detalle de origen de cada distribución</li>
+<li>Trazabilidad completa</li>
+<li>Exportación a Excel con desglose</li>
+</ul>
+</li>
+<li><strong>Validación de coherencia:</strong><ul>
+<li>Detectar cuentas sin uso en distribución</li>
+<li>Sugerencias de optimización</li>
+<li>Análisis de distribuciones redundantes</li>
+<li>Limpieza automática de obsoletas</li>
+</ul>
+</li>
+<li><strong>Distribución por período:</strong><ul>
+<li>Porcentajes diferentes por mes/trimestre</li>
+<li>Distribución estacional</li>
+<li>Cambios automáticos según calendario</li>
+<li>Histórico de distribuciones anteriores</li>
+</ul>
+</li>
+<li><strong>Multi-moneda:</strong><ul>
+<li>Soporte para distribuciones en diferentes monedas</li>
+<li>Conversión automática</li>
+<li>Redondeo configurable por moneda</li>
+</ul>
+</li>
+<li><strong>API y webhooks:</strong><ul>
+<li>API para actualizar distribuciones externamente</li>
+<li>Webhooks de cambios de distribución</li>
+<li>Integración con sistemas externos</li>
+<li>Sincronización bidireccional</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="limitaciones-actuales">
+<h1><a class="toc-backref" href="#toc-entry-23">Limitaciones actuales</a></h1>
+<ul class="simple">
+<li>Porcentajes estáticos (no dinámicos según uso)</li>
+<li>Sin distribución anidada automática</li>
+<li>No guarda histórico de cambios de porcentajes</li>
+<li>Sin validación de variaciones significativas</li>
+<li>No permite distribuciones temporales/estacionales</li>
+<li>Sin plantillas predefinidas</li>
+<li>No detecta distribuciones obsoletas</li>
+<li>Sin workflow de aprobación para cambios</li>
+<li>No integra con medidores reales (kWh, m², etc.)</li>
+<li>Redondeo puede causar diferencias de céntimos</li>
+</ul>
+</div>
+<div class="section" id="bug-tracker">
+<h1><a class="toc-backref" href="#toc-entry-24">Bug Tracker</a></h1>
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/netkia/netkia/issues">GitHub Issues</a>.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us to smash it by providing a detailed and welcomed
+<a class="reference external" href="https://github.com/netkia/netkia/issues/new?body=module:%20account_analytic_tag_distribution%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<p>Do not contact contributors directly about support or help with technical issues.</p>
+</div>
+<div class="section" id="credits">
+<h1><a class="toc-backref" href="#toc-entry-25">Credits</a></h1>
+<div class="section" id="authors">
+<h2><a class="toc-backref" href="#toc-entry-26">Authors</a></h2>
+<ul class="simple">
+<li>Netkia</li>
+<li>Tecnativa</li>
+</ul>
+</div>
+<div class="section" id="contributors">
+<h2><a class="toc-backref" href="#toc-entry-27">Contributors</a></h2>
+<ul class="simple">
+<li>Netkia &lt;<a class="reference external" href="mailto:soporte&#64;netkia.es">soporte&#64;netkia.es</a>&gt;</li>
+<li>Tecnativa - Víctor Martínez &lt;<a class="reference external" href="mailto:victor.martinez&#64;tecnativa.com">victor.martinez&#64;tecnativa.com</a>&gt;</li>
+</ul>
+</div>
+<div class="section" id="maintainers">
+<h2><a class="toc-backref" href="#toc-entry-28">Maintainers</a></h2>
+<p>Current maintainer:</p>
+<p><a class="reference external image-reference" href="https://github.com/victoralmau"><img alt="victoralmau" src="https://github.com/victoralmau.png?size=40px" /></a></p>
+<p>This module is part of the <a class="reference external" href="https://github.com/netkia/netkia/tree/16.0/account_analytic_tag_distribution">netkia/netkia</a> project on GitHub.</p>
+<p>You are welcome to contribute.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
